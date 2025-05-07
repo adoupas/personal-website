@@ -8,6 +8,21 @@ const skills = [
 	'React', 'Python', 'C++'
 ];
 
+const education = [
+	{
+		degree: 'Master of Science in Computer Science',
+		university: 'University of Athens',
+		year: 2020,
+		field: 'Computer Science'
+	},
+	{
+		degree: 'Bachelor of Science in Computer Science',
+		university: 'University of Athens',
+		year: 2018,
+		field: 'Computer Science'
+	}
+];
+
 const publications = [
 	{
 		title: 'Advanced Web Technologies in Research Environments',
@@ -152,8 +167,7 @@ import profilePic from '../assets/profile.jpg';
 				font-size: 1.2rem;
 			}
 			.skill-list {
-				list-style-type: none;
-				padding-left: 0;
+				padding-left: 1rem;
 			}
 			.bullet {
 				color: white;
@@ -161,7 +175,7 @@ import profilePic from '../assets/profile.jpg';
 				font-size: 1.2rem;
 			}
 			.skill-list li {
-				margin-bottom: 0.5rem;
+				margin-bottom: 0.2rem;
 			}
 			.main-header {
 				margin-bottom: 2rem;
@@ -288,7 +302,7 @@ import profilePic from '../assets/profile.jpg';
 	</head>
 	<body>
 		<header>
-			<p>Provisional content for testing. Don't trust it!</p>
+			<p>Provisional content for testing &#9760; Don't trust it!</p>
 		</header>
 		<main class="resume-container">
 				<!-- Left Sidebar -->
@@ -318,17 +332,24 @@ import profilePic from '../assets/profile.jpg';
 					</div>
 
 					<div class="sidebar-section">
+						<h2>Education</h2>
+						<ul class="skill-list">
+							{education.map(edu => <li> {edu.degree} - {edu.university} ({edu.year})</li>)}
+						</ul>
+					</div>
+
+					<div class="sidebar-section">
 						<h2>Skills</h2>
 						<ul class="skill-list">
-							{skills.map(skill => <li><span class="bullet">•</span> {skill}</li>)}
+							{skills.map(skill => <li> {skill}</li>)}
 						</ul>
 					</div>
 					
 					<div class="sidebar-section">
 						<h2>Languages</h2>
 						<ul class="skill-list">
-							<li><span class="bullet">•</span> Greek (Fluent)</li>
-							<li><span class="bullet">•</span> English (Fluent)</li>
+							<li> Greek (Fluent)</li>
+							<li> English (Fluent)</li>
 						</ul>
 					</div>
 				</aside>
