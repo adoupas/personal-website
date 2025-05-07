@@ -8,6 +8,10 @@ A professional personal website showcasing my experience as a Research Associate
 
 Visit the live website at: [https://adoupas.github.io/personal-website/](https://adoupas.github.io/personal-website/)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/adoupas/personal-website)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/adoupas/personal-website)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/adoupas/personal-website)
+
 ## 🚀 Project Structure
 
 Inside of the project, you'll see the following folders and files:
