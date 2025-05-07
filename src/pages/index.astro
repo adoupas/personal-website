@@ -50,6 +50,19 @@ const projects = [
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Professional portfolio of Sakis Doupas, Research Associate at Athena R.C. with over 20 years of experience in full stack development, web technologies, and research software." />
+		<meta name="keywords" content="Sakis Doupas, Research Associate, Web Development, Full Stack, PHP, JavaScript, React, Python, C++" />
+		<meta name="author" content={name} />
+		
+		<!-- Security Meta Tags -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://via.placeholder.com data:;" />
+		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+		<meta http-equiv="X-Frame-Options" content="DENY" />
+		<meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade" />
+		<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+		
 		<title>{name} | {title}</title>
 		<style>
 			:root {
