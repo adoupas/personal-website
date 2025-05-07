@@ -1,0 +1,312 @@
+---
+const name = 'Sakis Doupas';
+const title = 'Research Associate';
+const researchFocus = 'Athena R.C.';
+
+const skills = [
+	'Web Dev', 'PHP', 'JavaScript', 'SQL', 
+	'React', 'Python', 'C++'
+];
+
+const publications = [
+	{
+		title: 'Advanced Web Technologies in Research Environments',
+		journal: 'International Journal of Computer Science',
+		year: 2023,
+		authors: ['Doupas, S.', 'et al.']
+	},
+	{
+		title: 'Full Stack Development Paradigms in Scientific Computing',
+		journal: 'Research Computing Quarterly',
+		year: 2022,
+		authors: ['Doupas, S.', 'Research Team']
+	}
+];
+
+const contactInfo = {
+	email: 'sakis.doupas@example.com',
+	linkedIn: 'https://www.linkedin.com/in/sakisdoupas',
+	github: 'https://github.com/sakisdoupas',
+	phone: '+30 XXX XXX XXXX'
+};
+
+const projects = [
+	{
+		name: 'Research Web Platform',
+		description: 'Developed a comprehensive web platform for research data management and analysis',
+		tech: ['React', 'Node.js', 'SQL']
+	},
+	{
+		name: 'Scientific Data Visualization Tool',
+		description: 'Created an interactive data visualization system for research insights',
+		tech: ['Python', 'JavaScript', 'D3.js']
+	}
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{name} | {title}</title>
+		<style>
+			:root {
+				--sidebar-color: #1a3a5a;
+				--accent-color: #3e5c76;
+				--text-color: #333;
+				--light-text: #fff;
+				--border-color: #ddd;
+				--section-heading-color: #1a3a5a;
+			}
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				line-height: 1.6;
+				color: var(--text-color);
+				background-color: #f5f5f5;
+			}
+			.resume-container {
+				display: flex;
+				max-width: 1000px;
+				margin: 2rem auto;
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+				background-color: #fff;
+			}
+			.sidebar {
+				width: 30%;
+				background-color: var(--sidebar-color);
+				color: var(--light-text);
+				padding: 2rem;
+			}
+			.main-content {
+				width: 70%;
+				padding: 2rem;
+			}
+			.profile-image-container {
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+			.profile-image {
+				width: 180px;
+				height: 180px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 4px solid white;
+			}
+			.sidebar-section {
+				margin-bottom: 2rem;
+			}
+			.sidebar-section h2 {
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 1rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+			}
+			.contact-item {
+				display: flex;
+				align-items: center;
+				margin-bottom: 0.8rem;
+			}
+			.contact-icon {
+				margin-right: 10px;
+			}
+			.skill-list {
+				list-style-type: none;
+			}
+			.skill-list li {
+				margin-bottom: 0.5rem;
+			}
+			.main-header {
+				margin-bottom: 2rem;
+			}
+			.main-header h1 {
+				font-size: 2.5rem;
+				color: var(--section-heading-color);
+				margin-bottom: 0.5rem;
+			}
+			.main-header h1 span {
+				font-weight: normal;
+			}
+			.main-header h2 {
+				font-size: 1.2rem;
+				text-transform: uppercase;
+				color: #555;
+				margin-bottom: 1rem;
+			}
+			.main-header hr {
+				border: none;
+				height: 3px;
+				background-color: var(--accent-color);
+				width: 60px;
+				margin-bottom: 1.5rem;
+			}
+			.content-section {
+				margin-bottom: 2rem;
+			}
+			.content-section h2 {
+				font-size: 1.5rem;
+				color: var(--section-heading-color);
+				text-transform: uppercase;
+				margin-bottom: 1rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 1px solid var(--border-color);
+			}
+			.experience-item {
+				margin-bottom: 1.5rem;
+				position: relative;
+				padding-left: 20px;
+			}
+			.experience-item::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 8px;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: var(--accent-color);
+			}
+			.experience-header {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 0.5rem;
+			}
+			.experience-title {
+				font-weight: bold;
+				font-size: 1.1rem;
+			}
+			.experience-date {
+				color: #777;
+			}
+			.experience-subtitle {
+				color: #555;
+				margin-bottom: 0.5rem;
+			}
+			.experience-details {
+				list-style-type: disc;
+				padding-left: 1.5rem;
+				margin-top: 0.5rem;
+			}
+			.experience-details li {
+				margin-bottom: 0.5rem;
+			}
+			.publication-item {
+				margin-bottom: 1.5rem;
+			}
+			.publication-title {
+				font-weight: bold;
+				margin-bottom: 0.3rem;
+			}
+			.publication-details {
+				color: #555;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			
+			@media (max-width: 768px) {
+				.resume-container {
+					flex-direction: column;
+				}
+				.sidebar, .main-content {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="resume-container">
+				<!-- Left Sidebar -->
+				<div class="sidebar">
+					<div class="profile-image-container">
+						<img src="https://via.placeholder.com/150" alt="{name}" class="profile-image" />
+					</div>
+
+					<div class="sidebar-section">
+						<h2>Contact</h2>
+						<div class="contact-item">
+							<span class="contact-icon">📱</span>
+							<span>{contactInfo.phone}</span>
+						</div>
+						<div class="contact-item">
+							<span class="contact-icon">📧</span>
+							<a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+						</div>
+						<div class="contact-item">
+							<span class="contact-icon">🔗</span>
+							<a href={contactInfo.github} target="_blank">GitHub Profile</a>
+						</div>
+						<div class="contact-item">
+							<span class="contact-icon">💼</span>
+							<a href={contactInfo.linkedIn} target="_blank">LinkedIn</a>
+						</div>
+					</div>
+
+					<div class="sidebar-section">
+						<h2>Skills</h2>
+						<ul class="skill-list">
+							{skills.map(skill => <li>{skill}</li>)}
+						</ul>
+					</div>
+				</div>
+
+				<!-- Main Content -->
+				<div class="main-content">
+					<div class="main-header">
+						<h1><span>{name.split(' ')[0]}</span> {name.split(' ')[1]}</h1>
+						<h2>{title}</h2>
+						<hr />
+						<p>
+							Full stack developer with over 20 years of extensive experience in web development and research technologies. 
+							Currently working as a Research Associate at Athena R.C., bringing a wealth of technical expertise 
+							to solve complex computational challenges. Passionate about leveraging cutting-edge technologies 
+							to drive innovative research solutions.
+						</p>
+					</div>
+
+					<div class="content-section">
+						<h2>Work Experience</h2>
+						{projects.map(project => (
+							<div class="experience-item">
+								<div class="experience-header">
+									<div class="experience-title">{project.name}</div>
+									<div class="experience-date">2020 - Present</div>
+								</div>
+								<div class="experience-subtitle">{researchFocus}</div>
+								<p>{project.description}</p>
+								<ul class="experience-details">
+									{project.tech.map(tech => <li>Utilized {tech} for development and implementation</li>)}
+								</ul>
+							</div>
+						))}
+					</div>
+
+					<div class="content-section">
+						<h2>Publications</h2>
+						{publications.map(pub => (
+							<div class="publication-item">
+								<div class="publication-title">{pub.title}</div>
+								<div class="publication-details">
+									<strong>{pub.journal}</strong> ({pub.year})<br />
+									Authors: {pub.authors.join(', ')}
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
