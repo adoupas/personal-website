@@ -42,6 +42,10 @@ const projects = [
 		tech: ['Python', 'JavaScript', 'D3.js']
 	}
 ];
+
+import { Image } from 'astro:assets';
+import profilePic from '../assets/profile.jpg';
+
 ---
 
 <html lang="en">
@@ -184,7 +188,7 @@ const projects = [
 				text-transform: uppercase;
 				margin-bottom: 1rem;
 				padding-bottom: 0.5rem;
-				border-bottom: 1px solid var(--border-color);
+				border-bottom: 1px solid var(--accent-color);
 			}
 			.content-section {
 				position: relative;
@@ -212,9 +216,9 @@ const projects = [
 				content: "";
 				position: absolute;
 				left: 5px;
-				top: 60px;
+				top: 105px;
 				width: 2px;
-				height: calc(100% - 80px);
+				height: calc(100% - 105px);
 				background-color: #eaeaea;
 				z-index: 1;
 			}
@@ -259,6 +263,10 @@ const projects = [
 			a:hover {
 				text-decoration: underline;
 			}
+			footer {
+				text-align: center;
+				margin-top: 2rem;
+			}
 			
 			@media (max-width: 768px) {
 				.resume-container {
@@ -271,11 +279,11 @@ const projects = [
 		</style>
 	</head>
 	<body>
-		<div class="resume-container">
+		<main class="resume-container">
 				<!-- Left Sidebar -->
-				<div class="sidebar">
+				<aside class="sidebar">
 					<div class="profile-image-container">
-						<img src={import.meta.env.BASE_URL + '/profile.jpg'} alt={name} class="profile-image" />
+						<Image src={profilePic} alt={name} class="profile-image" />
 					</div>
 
 					<div class="sidebar-section">
@@ -312,10 +320,10 @@ const projects = [
 							<li><span class="bullet">•</span> English (Fluent)</li>
 						</ul>
 					</div>
-				</div>
+				</aside>
 
 				<!-- Main Content -->
-				<div class="main-content">
+				<section class="main-content">
 					<div class="main-header">
 						<h1><span>{name.split(' ')[0]}</span> {name.split(' ')[1]}</h1>
 						<h2>{title}</h2>
@@ -360,8 +368,11 @@ const projects = [
 							</div>
 						))}
 					</div>
-				</div>
-			</div>
-		</div>
+				</section>
+			</main>
+		</main>
+		<footer>
+			<pre>May the source be with you</pre>
+		</footer>
 	</body>
 </html>
