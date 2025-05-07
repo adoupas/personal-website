@@ -43,7 +43,7 @@ Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 ## Current Implementation
 
-Currently, we've implemented these security features using HTML meta tags, which provide some protection but are not as effective as HTTP headers.
+Currently, we've implemented these security features using HTML meta tags, which provide some protection but are not as effective as HTTP headers. This approach was chosen for compatibility with GitHub Pages, which doesn't support custom HTTP headers.
 
 ## Alternative Hosting Options
 
