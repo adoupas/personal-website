@@ -83,13 +83,17 @@ const projects = [
 				line-height: 1.6;
 				color: var(--text-color);
 				background-color: #f5f5f5;
+				padding: 20px;
 			}
 			.resume-container {
-				display: flex;
-				max-width: 1000px;
+				max-width: 1200px;
 				margin: 2rem auto;
-				box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+				display: flex;
 				background-color: #fff;
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+				border-radius: 12px;
+				overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+				position: relative; /* Ensures the shadow is applied to the whole container */
 			}
 			.sidebar {
 				width: 30%;
@@ -129,10 +133,20 @@ const projects = [
 				margin-bottom: 0.8rem;
 			}
 			.contact-icon {
-				margin-right: 10px;
+				margin-right: 0.5rem;
+				width: 20px;
+				display: inline-block;
+				color: white;
+				font-size: 1.2rem;
 			}
 			.skill-list {
 				list-style-type: none;
+				padding-left: 0;
+			}
+			.bullet {
+				color: white;
+				margin-right: 0.5rem;
+				font-size: 1.2rem;
 			}
 			.skill-list li {
 				margin-bottom: 0.5rem;
@@ -267,19 +281,19 @@ const projects = [
 					<div class="sidebar-section">
 						<h2>Contact</h2>
 						<div class="contact-item">
-							<span class="contact-icon">📱</span>
+							<span class="contact-icon">&#9742;</span>
 							<span>{contactInfo.phone}</span>
 						</div>
 						<div class="contact-item">
-							<span class="contact-icon">📧</span>
+							<span class="contact-icon">&#9993;</span>
 							<a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
 						</div>
 						<div class="contact-item">
-							<span class="contact-icon">🔗</span>
+							<span class="contact-icon">&#9733;</span>
 							<a href={contactInfo.github} target="_blank">GitHub Profile</a>
 						</div>
 						<div class="contact-item">
-							<span class="contact-icon">💼</span>
+							<span class="contact-icon">&#9737;</span>
 							<a href={contactInfo.linkedIn} target="_blank">LinkedIn</a>
 						</div>
 					</div>
@@ -287,7 +301,15 @@ const projects = [
 					<div class="sidebar-section">
 						<h2>Skills</h2>
 						<ul class="skill-list">
-							{skills.map(skill => <li>{skill}</li>)}
+							{skills.map(skill => <li><span class="bullet">•</span> {skill}</li>)}
+						</ul>
+					</div>
+					
+					<div class="sidebar-section">
+						<h2>Languages</h2>
+						<ul class="skill-list">
+							<li><span class="bullet">•</span> Greek (Fluent)</li>
+							<li><span class="bullet">•</span> English (Fluent)</li>
 						</ul>
 					</div>
 				</div>
