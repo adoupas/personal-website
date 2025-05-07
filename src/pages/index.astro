@@ -172,20 +172,37 @@ const projects = [
 				padding-bottom: 0.5rem;
 				border-bottom: 1px solid var(--border-color);
 			}
-			.experience-item {
-				margin-bottom: 1.5rem;
+			.content-section {
 				position: relative;
-				padding-left: 20px;
 			}
-			.experience-item::before {
-				content: "";
+			.experience-item {
+				margin-bottom: 2rem;
+				position: relative;
+				padding-left: 30px;
+			}
+			.timeline-dot {
 				position: absolute;
 				left: 0;
 				top: 8px;
-				width: 10px;
-				height: 10px;
+				width: 12px;
+				height: 12px;
 				border-radius: 50%;
 				background-color: var(--accent-color);
+				z-index: 2;
+			}
+			.content-section h2 {
+				margin-bottom: 2rem;
+			}
+			/* Apply vertical line only to work experience section */
+			#work-experience:before {
+				content: "";
+				position: absolute;
+				left: 5px;
+				top: 60px;
+				width: 2px;
+				height: calc(100% - 80px);
+				background-color: #eaeaea;
+				z-index: 1;
 			}
 			.experience-header {
 				display: flex;
@@ -244,7 +261,7 @@ const projects = [
 				<!-- Left Sidebar -->
 				<div class="sidebar">
 					<div class="profile-image-container">
-						<img src="https://via.placeholder.com/150" alt="{name}" class="profile-image" />
+						<img src={import.meta.env.BASE_URL + 'profile.jpg'} alt={name} class="profile-image" />
 					</div>
 
 					<div class="sidebar-section">
@@ -289,19 +306,22 @@ const projects = [
 						</p>
 					</div>
 
-					<div class="content-section">
+					<div id="work-experience" class="content-section">
 						<h2>Work Experience</h2>
 						{projects.map(project => (
 							<div class="experience-item">
-								<div class="experience-header">
-									<div class="experience-title">{project.name}</div>
-									<div class="experience-date">2020 - Present</div>
+								<div class="timeline-dot"></div>
+								<div class="experience-content">
+									<div class="experience-header">
+										<div class="experience-title">{project.name}</div>
+										<div class="experience-date">2020 - Present</div>
+									</div>
+									<div class="experience-subtitle">{researchFocus}</div>
+									<p>{project.description}</p>
+									<ul class="experience-details">
+										{project.tech.map(tech => <li>Utilized {tech} for development and implementation</li>)}
+									</ul>
 								</div>
-								<div class="experience-subtitle">{researchFocus}</div>
-								<p>{project.description}</p>
-								<ul class="experience-details">
-									{project.tech.map(tech => <li>Utilized {tech} for development and implementation</li>)}
-								</ul>
 							</div>
 						))}
 					</div>
