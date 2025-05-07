@@ -88,3 +88,11 @@ export default defineConfig({
   }),
 });
 ```
+
+## Security Contact
+
+If you discover any security vulnerabilities or have concerns regarding the security of this project, please contact me immediately at:
+
+**Email**: adoupas@doupas.com
+
+When reporting a vulnerability, please include a detailed description of the issue, steps to reproduce it (if applicable), and any potential impact. I will respond as promptly as possible and work towards resolving the issue.
