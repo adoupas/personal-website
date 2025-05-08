@@ -7,4 +7,9 @@ export default defineConfig({
   // Use '/personal-website' in production, '/' in development
   // We use import.meta.env which is supported by Vite/Astro
   base: import.meta.env.PROD ? '/personal-website' : '',
+  vite: {
+    build: {
+      assetsInlineLimit: 4000,
+    }
+  };
 });
