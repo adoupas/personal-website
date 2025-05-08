@@ -9,7 +9,7 @@ export default defineConfig({
   base: import.meta.env.PROD ? '/personal-website' : '',
   vite: {
     build: {
-      assetsInlineLimit: 4000,
+      assetsInlineLimit: 8000,
     }
   },
 });
