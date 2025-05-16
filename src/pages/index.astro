@@ -469,7 +469,6 @@ import profilePic from "../assets/profile.jpg";
 
 			@media (max-width: 768px) {
 				.main-nav {
-					margin: 0 -1rem;
 					padding: 0.6rem 0;
 				}
 
@@ -478,7 +477,6 @@ import profilePic from "../assets/profile.jpg";
 					overflow-x: auto;
 					white-space: nowrap;
 					display: block;
-					-webkit-overflow-scrolling: touch;
 				}
 
 				.main-nav li {
@@ -755,6 +753,45 @@ import profilePic from "../assets/profile.jpg";
 					width: 100%;
 				}
 			}
+			/* Back to top button */
+			.back-to-top {
+				position: fixed;
+				bottom: 2rem;
+				right: 2rem;
+				background: var(--header-color);
+				color: var(--header-text-color);
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				opacity: 0;
+				transform: translateY(20px);
+				transition: all 0.3s ease;
+				z-index: 999;
+			}
+
+			.back-to-top.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			.back-to-top:hover {
+				background: #e8b400;
+				transform: translateY(-3px);
+			}
+
+			@media (max-width: 768px) {
+				.back-to-top {
+					width: 45px;
+					height: 45px;
+					right: 1rem;
+					bottom: 1rem;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -1006,8 +1043,40 @@ import profilePic from "../assets/profile.jpg";
 				</div>
 			</section>
 		</main>
+		<!-- Back to Top Button -->
+		<a href="#" class="back-to-top" id="backToTop" title="Back to top">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M18 15l-6-6-6 6"/>
+			</svg>
+		</a>
 	</body>
 	<footer>
 		ᕙ(⇀‸↼‶)ᕗ <pre> May the source be with you</pre>
 	</footer>
+	
+	<script>
+		// Back to top button
+		document.addEventListener('DOMContentLoaded', () => {
+			const backToTopButton = document.getElementById('backToTop');
+			if (backToTopButton) {
+				// Show/hide button on scroll
+				window.addEventListener('scroll', () => {
+					if (window.pageYOffset > 300) {
+						backToTopButton.classList.add('visible');
+					} else {
+						backToTopButton.classList.remove('visible');
+					}
+				});
+				
+				// Smooth scroll to top
+				backToTopButton.addEventListener('click', (e) => {
+					e.preventDefault();
+					window.scrollTo({
+						top: 0,
+						behavior: 'smooth'
+					});
+				});
+			}
+		});
+	</script>
 </html>
