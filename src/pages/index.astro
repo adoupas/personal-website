@@ -5,6 +5,9 @@
 // Version: 1.0.1
 // see LICENSE for more details
 
+import { Image } from 'astro:assets';
+import profilePic from '../assets/profile.jpg';
+
 const name = "Sakis Doupas";
 const title = "Research Associate";
 const researchFocus = "Athena R.C.";
@@ -292,9 +295,6 @@ const contactInfo = {
 	github: "https://github.com/adoupas",
 	phone: "+30 XXX XXX XXXX",
 };
-
-import { Image } from "astro:assets";
-import profilePic from "../assets/profile.jpg";
 ---
 
 <html lang="en">
@@ -832,6 +832,7 @@ import profilePic from "../assets/profile.jpg";
 						width={200}
 						height={238}
 						quality={80}
+						loading="lazy"
 						format="webp"
 					/>
 				</div>
