@@ -5,89 +5,330 @@
 // Version: 1.0.1
 // see LICENSE for more details
 
-const name = 'Sakis Doupas';
-const title = 'Research Associate';
-const researchFocus = 'Athena R.C.';
+const name = "Sakis Doupas";
+const title = "Research Associate";
+const researchFocus = "Athena R.C.";
 
-const skills = [
-	'Web Dev', 'PHP', 'JavaScript', 'SQL', 
-	'React', 'Python', 'C++'
+const skills = {
+	technical: [
+		{ name: "PHP", level: "Expert", years: 15 },
+		{ name: "JavaScript/TypeScript", level: "Advanced", years: 12 },
+		{ name: "SQL/Databases", level: "Expert", years: 15 },
+		{ name: "React", level: "Advanced", years: 2 },
+		{ name: "Python", level: "Intermediate", years: 2 },
+		{ name: "C++", level: "Intermediate", years: 4 },
+		{ name: "Linux/Windows Administration", level: "Advanced", years: 10 },
+		{ name: "Network Administration", level: "Advanced", years: 8 },
+	],
+	frameworks: ["Symfony", "Laravel", "WordPress", "jQuery", "Qt", ".NET", "TensorFlow", "scikit-learn"],
+	methodologies: ["Agile/Scrum", "Secure Coding Practices", "CI/CD", "Version Control (Git/SVN)"],
+	softSkills: [
+		{
+			title: "Communication",
+			description: "Proven ability to collaborate effectively with remote teams and clients through various communication channels including phone, email, and video conferencing. Experienced in leading small development teams and delivering presentations to diverse audiences."
+		},
+		{
+			title: "Project Management",
+			description: "Extensive experience in planning, implementing, and managing software projects. Skilled in coordinating team efforts, meeting tight deadlines, and making critical project decisions. Experienced in EU-funded projects with strict timelines and deliverables."
+		},
+		{
+			title: "Technical Leadership",
+			description: "Two decades of experience in software development across various domains. Proficient in technical documentation, proposal writing, and guiding project direction. Trusted with strategic decision-making for project roadmaps and technical implementations."
+		}
+	]
+};
+
+// Simple array of technical skills for the skills list
+const technicalSkillsList = [
+	"PHP (Symfony, Laravel, WordPress)",
+	"JavaScript/TypeScript (React, jQuery)",
+	"SQL & Database Design",
+	"Python (Machine Learning)",
+	"C++ (Qt, Boost)",
+	".NET",
+	"Perl",
+	"Linux/Windows System Administration"
+];
+
+const languages = [
+	{
+		language: "Greek",
+		level: "Native"
+	},
+	{
+		language: "English",
+		level: "Proficiency (Certificate of Proficiency in English, University of Michigan)"
+	}
 ];
 
 const education = [
 	{
-		degree: 'Master of Science in Computer Science',
-		university: 'University of Athens',
-		year: 2020,
-		field: 'Computer Science'
+		degree: "Diplomma in Civil Engineering",
+		university: "Democritus University of Thrace",
+		year: 2006,
+		field: "Civil Engineering",
 	},
 	{
-		degree: 'Bachelor of Science in Computer Science',
-		university: 'University of Athens',
-		year: 2018,
-		field: 'Computer Science'
-	}
+		degree: "Master of Science in Biomedical Informatics",
+		university: "University of Athens",
+		year: 2025,
+		field: "Computer Science",
+	},
 ];
 
 const publications = [
 	{
-		title: 'Advanced Web Technologies in Research Environments',
-		journal: 'International Journal of Computer Science',
+		title: "Exposing geospatial cultural heritage content in map-based applications",
+		journal:
+			"6th International Workshop on Big Data Visual Exploration and Analytics (BigVis)",
 		year: 2023,
-		authors: ['Doupas, S.', 'et al.']
+		authors: [
+			"Bikakis, Nikos",
+			"Giannopoulos, Giorgos",
+			"Sidiropoulos, Nikos",
+			"Flouda, Christina",
+			"Doupas, Athanasios",
+			"Giouli, Voula",
+			"Karioris, Panagiotis",
+			"Botini, Paraskevi",
+			"Vacalopoulou, Anna",
+			"Stainhaouer, Gregory",
+		],
+		editors: ["Fletcher, George", "Kantere, Verena"],
 	},
 	{
-		title: 'Full Stack Development Paradigms in Scientific Computing',
-		journal: 'Research Computing Quarterly',
+		title: "From mythos to logos: A bilingual thesaurus tailored to meet users' needs within the ecosystem of cultural tourism",
+		journal:
+			"Dictionaries and Society. Proceedings of the XX EURALEX International Congress",
 		year: 2022,
-		authors: ['Doupas, S.', 'Research Team']
+		pages: "625-634",
+		publisher: "IDS-Verlag, Mannheim",
+		authors: [
+			"Giouli, Voula",
+			"Vacalopoulou, Anna",
+			"Sidiropoulos, Nikos",
+			"Flouda, Christina",
+			"Doupas, Athanasios",
+			"Stainhaouer, Gregory",
+		],
+		editors: [
+			"Klosa-Kückelhaus, Annette",
+			"Engelberg, Stefan",
+			"Möhrs, Christine",
+			"Storjohann, Petra",
+		],
+	},
+	{
+		title: "Language Resources for human-centric NLP: the MYTHOTOPIA geo-tagged dataset",
+		journal:
+			"1st Workshop on Human-Centric Sciences and Technologies in Greece",
+		year: 2022,
+		pages: "21-22",
+		authors: [
+			"Giouli, Voula",
+			"Vacalopoulou, Anna",
+			"Giannopoulos, Giorgos",
+			"Doupas, Athanasios",
+			"Karioris, Panagiotis",
+			"Michailidou, Natasa",
+			"Mourthos, Ioannis",
+			"Bikakis, Nikos",
+			"Botini, Paraskevi",
+			"Sarafopoulou, Domna",
+			"Sidiropoulos, Nikos",
+			"Stainhaouer, Gregory",
+			"Tsiafaki, Despoina",
+			"Flouda, Christina",
+		],
+	},
+	{
+		title: "Mythotopia, Magical today, alive yesterday: Journeys in Eastern Macedonia & Thrace",
+		journal:
+			"1st Workshop on Human-Centric Sciences and Technologies in Greece",
+		year: 2022,
+		pages: "20-21",
+		authors: [
+			"Vacalopoulou, Anna",
+			"Giannopoulos, Giorgos",
+			"Giouli, Voula",
+			"Doupas, Athanasios",
+			"Karioris, Panagiotis",
+			"Michailidou, Natasa",
+			"Mourthos, Ioannis",
+			"Bikakis, Nikos",
+			"Botini, Paraskevi",
+			"Sarafopoulou, Domna",
+			"Sidiropoulos, Nikos",
+			"Stainhaouer, Gregory",
+			"Tsiafaki, Despoina",
+			"Flouda, Christina",
+		],
+	},
+	{
+		title: "Mythotopia: The educational application",
+		journal:
+			"1st Workshop on Human-Centric Sciences and Technologies in Greece",
+		year: 2022,
+		pages: "16-17",
+		authors: [
+			"Karioris, Panagiotis",
+			"Vacalopoulou, Anna",
+			"Giannopoulos, Giorgos",
+			"Giouli, Voula",
+			"Doupas, Athanasios",
+			"Michailidou, Natasa",
+			"Mourthos, Ioannis",
+			"Bikakis, Nikos",
+			"Botini, Paraskevi",
+			"Sarafopoulou, Domna",
+			"Sidiropoulos, Nikos",
+			"Stainhaouer, Gregory",
+			"Tsiafaki, Despoina",
+			"Flouda, Christina",
+		],
+	},
+	{
+		title: "Placing multi-modal, and multi-lingual data in the humanities domain on the map: The Mythotopia geotagged corpus",
+		journal:
+			"Proceedings of the 13th Conference on Language Resources and Evaluation (LREC 2022)",
+		year: 2022,
+		pages: "2856-2864",
+		publisher: "European Language Resources Association (ELRA)",
+		location: "Marseille, 20-25 June 2022",
+		authors: [
+			"Giouli, Voula",
+			"Vacalopoulou, Anna",
+			"Sidiropoulos, Nikos",
+			"Flouda, Christina",
+			"Doupas, Athanasios",
+			"Giannopoulos, Giorgos",
+			"Bikakis, Nikos",
+			"Kaffes, Vassilis",
+			"Stainhaouer, Gregory",
+		],
+	},
+];
+
+const experience = [
+	{
+		position: "Research Associate",
+		company: "Athena Research Center, Xanthi",
+		period: "March 2021 - Present",
+		responsibilities: [
+			'Participation in the project "Mythological Routes in Eastern Macedonia and Thrace"',
+			'Involvement in the "Theatrum Digitale" project of the National Theatre',
+			'Participation in the European project "DUSE"',
+			"Linux/Windows server management, website hosting",
+		],
+		tools: "PHP, JavaScript, PostgreSQL, SQL Server, Docker, Git",
+	},
+	{
+		position: "Computer Programmer",
+		company: "BookLogic, Istanbul",
+		period: "July 2015 - December 2020",
+		responsibilities: [
+			"Development of an online booking engine for hotels and backoffice application for tour operators and travel agents",
+			"Development of tourism websites for hotel bookings, flight tickets, charter flights, and transportation services",
+			"Integration with third-party systems (booking engines, channels) using web services (e.g., Booking.com, Trivago, Expedia)",
+			"Development and management on Amazon Cloud Platform (EC2, VPC, S3, CloudWatch, CloudFormation, Lambda, SNS)",
+			"Integration with Trend Micro Intrusion Prevention System",
+			"Involvement in PCI DSS v3.2.1 certification process as a Service Provider for credit card payments",
+			"Linux/Windows server management, email, DNS, TLS configuration",
+			"Experience with Docker Containers and Kubernetes",
+		],
+		tools: "PHP, CFML, JavaScript/jQuery, MS SQL Server, MySQL, MongoDB, RabbitMQ, Docker, CSS, HTML, XML, Git",
+	},
+	{
+		position: "Freelance Computer Programmer",
+		company: "Self-employed, Alexandroupoli",
+		period: "March 2011 - June 2015",
+		responsibilities: [
+			"Development of an online flight booking system for IATA, low-cost, and charter flights via multicom webservice",
+			"Development and management of tourism websites for hotel bookings, flights, tours, and car rentals",
+			"Integration with XML web services for hotel bookings (e.g., avra tours)",
+			"Bank payment gateway integration and PCI compliance certification",
+			"Development of WordPress themes and plugins",
+			"Website development for the Environmental Education Center of Maroneia",
+		],
+		tools: "Adobe ColdFusion, PHP, JavaScript/jQuery, MS SQL Server, MySQL, CSS3, HTML5, SVN",
+	},
+	{
+		position: "Computer Programmer",
+		company: "WebLogic, Alexandroupoli",
+		period: "August 2008 - December 2010",
+		responsibilities: [
+			"Development of an online booking engine and backoffice application for tour operators and travel agents",
+			"Development of tourism websites for various travel services",
+			"Integration with third-party booking engines using XML web services (e.g., Galileo flights, bedsonline, forthCRS, cartrawler)",
+			"Bank payment gateway integration",
+			"Integration with tax systems for electronic invoicing",
+		],
+		tools: "Adobe ColdFusion, JavaScript/jQuery, MS SQL Server, CSS, HTML, XML, SVN",
+	},
+	{
+		position: "Computer Programmer - Systems & Network Administrator",
+		company: "IEL, Xanthi",
+		period: "April 1999 - July 2008",
+		responsibilities: [
+			"Systems/Network Administrator for selected schools in Thrace under the 'Odysseas' project",
+			"Development of tools for enriching the National Treasury of the Greek Language (Programming languages: Perl, VB.NET, SQL)",
+			"Development of the Educational Treasury of Greek Texts, participation in writing deliverables and project presentation (Programming languages: VB.NET, Javascript, SQL)",
+			"Website development for the National Theatre archive (Programming languages: VB.NET, javascript/jQuery, SQL)",
+			"Systems management: Windows/Linux servers, DNS, email, SQL, firewall and network: Cisco routers, OSPF and BGP routing protocols, access control lists implementation"
+		],
+		tools: "Perl, VB.NET, JavaScript, jQuery, SQL, Windows/Linux Server, Cisco Networking, OSPF, BGP"
 	}
 ];
 
 const contactInfo = {
-	email: 'adoupass@doupas.com',
-	linkedIn: 'https://www.linkedin.com/in/adoupas',
-	github: 'https://github.com/adoupas',
-	phone: '+30 XXX XXX XXXX'
+	email: "adoupass@doupas.com",
+	linkedIn: "https://www.linkedin.com/in/adoupas",
+	github: "https://github.com/adoupas",
+	phone: "+30 XXX XXX XXXX",
 };
 
-const projects = [
-	{
-		name: 'Research Web Platform',
-		description: 'Developed a comprehensive web platform for research data management and analysis',
-		tech: ['React', 'Node.js', 'SQL']
-	},
-	{
-		name: 'Scientific Data Visualization Tool',
-		description: 'Created an interactive data visualization system for research insights',
-		tech: ['Python', 'JavaScript', 'D3.js']
-	}
-];
-
-import { Image } from 'astro:assets';
-import profilePic from '../assets/profile.jpg';
-
+import { Image } from "astro:assets";
+import profilePic from "../assets/profile.jpg";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + '/favicon.svg'} />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href={import.meta.env.BASE_URL + "/favicon.svg"}
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		
+
 		<!-- SEO Meta Tags -->
-		<meta name="description" content="Professional portfolio of Sakis Doupas, Research Associate at Athena R.C. with over 20 years of experience in full stack development, web technologies, and research software." />
-		<meta name="keywords" content="Sakis Doupas, Research Associate, Web Development, Full Stack, PHP, JavaScript, React, Python, C++" />
+		<meta
+			name="description"
+			content="Professional portfolio of Sakis Doupas, Research Associate at Athena R.C. with over 20 years of experience in full stack development, web technologies, and research software."
+		/>
+		<meta
+			name="keywords"
+			content="Sakis Doupas, Research Associate, Web Development, Full Stack, PHP, JavaScript, React, Python, C++"
+		/>
 		<meta name="author" content={name} />
-		
+
 		<!-- Security Meta Tags -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://via.placeholder.com data:;" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://via.placeholder.com data:;"
+		/>
 		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
 		<meta http-equiv="X-Frame-Options" content="DENY" />
-		<meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade" />
-		<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-		
+		<meta
+			http-equiv="Referrer-Policy"
+			content="no-referrer-when-downgrade"
+		/>
+		<meta
+			http-equiv="Permissions-Policy"
+			content="camera=(), microphone=(), geolocation=()"
+		/>
+
 		<title>{name} | {title}</title>
 		<style>
 			:root {
@@ -106,7 +347,7 @@ import profilePic from '../assets/profile.jpg';
 				padding: 0;
 			}
 			body {
-				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 				line-height: 1.6;
 				color: var(--text-color);
 				background-color: #f5f5f5;
@@ -158,7 +399,193 @@ import profilePic from '../assets/profile.jpg';
 				letter-spacing: 1px;
 				margin-bottom: 1rem;
 				padding-bottom: 0.5rem;
-				border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+			}
+
+			/* Navigation Menu */
+			.main-nav {
+				position: sticky;
+				top: 0;
+				background: rgba(255, 255, 255, 0.98);
+				backdrop-filter: blur(8px);
+				z-index: 1000;
+				padding: 0.8rem 0;
+				border-bottom: 1px solid rgb(0 0 0 / 78%);
+				margin: 0 -2rem 2rem;
+				box-shadow: 2px 13px 30px -10px #9999992e;
+			}
+
+			.main-nav ul {
+				display: flex;
+				justify-content: flex-start;
+				list-style: none;
+				margin: 0 auto;
+				padding: 0 2rem;
+				max-width: 1200px;
+			}
+
+			.main-nav li {
+				margin-right: 2.5rem;
+			}
+
+			.main-nav li:last-child {
+				margin-right: 0;
+			}
+
+			.main-nav a {
+				color: #444;
+				text-decoration: none;
+				font-size: 0.95rem;
+				font-weight: 500;
+				padding: 0.5rem 0.25rem;
+				display: block;
+				position: relative;
+				transition: all 0.2s ease;
+				letter-spacing: 0.3px;
+			}
+
+			.main-nav a::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background: var(--section-heading-color);
+				transition: width 0.3s ease;
+			}
+
+			.main-nav a:hover,
+			.main-nav a:focus,
+			.main-nav a:active,
+			.main-nav a.active {
+				color: var(--section-heading-color);
+			}
+
+			.main-nav a:hover::after,
+			.main-nav a:focus::after,
+			.main-nav a.active::after {
+				width: 100%;
+			}
+
+			@media (max-width: 768px) {
+				.main-nav {
+					margin: 0 -1rem;
+					padding: 0.6rem 0;
+				}
+
+				.main-nav ul {
+					padding: 0 1rem;
+					overflow-x: auto;
+					white-space: nowrap;
+					display: block;
+					-webkit-overflow-scrolling: touch;
+				}
+
+				.main-nav li {
+					display: inline-block;
+					margin-right: 1.5rem;
+				}
+
+				.main-nav a {
+					font-size: 0.9rem;
+				}
+			}
+
+			/* Skills Section */
+			.skills-container {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+			}
+
+			.skills-category h3 {
+				color: var(--section-heading-color);
+				margin: 1.5rem 0 1rem;
+				font-size: 1.3rem;
+				border-bottom: 2px solid var(--header-color);
+				display: inline-block;
+				padding-bottom: 0.3rem;
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+				gap: 1rem;
+			}
+
+			.skill-item {
+				margin-bottom: 1rem;
+			}
+
+			.skill-name {
+				display: block;
+				margin-bottom: 0.3rem;
+				font-weight: 500;
+			}
+
+			.skill-level {
+				height: 6px;
+				background: #f0f0f0;
+				border-radius: 3px;
+				overflow: hidden;
+				margin-bottom: 0.3rem;
+			}
+
+			.skill-level-bar {
+				height: 100%;
+				background: var(--header-color);
+				border-radius: 3px;
+			}
+
+			.skill-years {
+				font-size: 0.85rem;
+				color: #666;
+			}
+
+			.skills-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6rem;
+			}
+
+			.skill-tag {
+				background: #f5f5f5;
+				color: #333;
+				padding: 0.4rem 0.8rem;
+				border-radius: 20px;
+				font-size: 0.9rem;
+				border: 1px solid #ddd;
+			}
+
+			.soft-skills {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+				gap: 1rem;
+			}
+
+			.soft-skill-item {
+				background: #f9f9f9;
+				padding: 1.2rem;
+				border-radius: 6px;
+				border-left: 3px solid var(--header-color);
+			}
+
+			.soft-skill-item h4 {
+				color: var(--section-heading-color);
+				margin-bottom: 0.5rem;
+			}
+
+			.soft-skill-item p {
+				color: #555;
+				font-size: 0.95rem;
+				line-height: 1.5;
+			}
+
+			@media (max-width: 768px) {
+				.skills-grid,
+				.soft-skills {
+					grid-template-columns: 1fr;
+				}
 			}
 			.contact-item {
 				display: flex;
@@ -239,7 +666,6 @@ import profilePic from '../assets/profile.jpg';
 			.content-section h2 {
 				margin-bottom: 2rem;
 			}
-			/* Apply vertical line only to work experience section */
 			#work-experience:before {
 				content: "";
 				position: absolute;
@@ -276,13 +702,37 @@ import profilePic from '../assets/profile.jpg';
 			}
 			.publication-item {
 				margin-bottom: 1.5rem;
+				padding-bottom: 1.5rem;
+				border-bottom: 1px solid #eee;
+			}
+			.publication-item:last-child {
+				border-bottom: none;
 			}
 			.publication-title {
-				font-weight: bold;
-				margin-bottom: 0.3rem;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+				color: var(--section-heading-color);
 			}
 			.publication-details {
 				color: #555;
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+			.publication-authors {
+				margin-bottom: 0.3rem;
+			}
+			.publication-journal {
+				font-style: italic;
+				margin-bottom: 0.3rem;
+			}
+			.publication-pages,
+			.publication-publisher,
+			.publication-editors {
+				margin-bottom: 0.2rem;
+			}
+			.publication-year {
+				font-weight: 600;
+				color: var(--accent-color);
 			}
 			a {
 				color: inherit;
@@ -295,12 +745,13 @@ import profilePic from '../assets/profile.jpg';
 				text-align: center;
 				margin-top: 2rem;
 			}
-			
+
 			@media (max-width: 768px) {
 				.resume-container {
 					flex-direction: column;
 				}
-				.sidebar, .main-content {
+				.sidebar,
+				.main-content {
 					width: 100%;
 				}
 			}
@@ -311,110 +762,252 @@ import profilePic from '../assets/profile.jpg';
 			<p>Provisional content for testing &#9760; Don't trust it!</p>
 		</header>
 		<main class="resume-container">
-				<!-- Left Sidebar -->
-				<aside class="sidebar">
-					<div class="profile-image-container">
-						<Image src={profilePic} alt={name} title="Hello world!" class="profile-image" />
-					</div>
+			<!-- Left Sidebar -->
+			<aside class="sidebar">
+				<div class="profile-image-container">
+					<Image
+						src={profilePic}
+						alt={name}
+						title="Hello world!"
+						class="profile-image"
+					/>
+				</div>
 
-					<div class="sidebar-section">
-						<h2>Contact</h2>
-						<div class="contact-item">
-							<span class="contact-icon">&#9742;</span>
-							<span>{contactInfo.phone}</span>
-						</div>
-						<div class="contact-item">
-							<span class="contact-icon">&#9993;</span>
-							<a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-						</div>
-						<div class="contact-item">
-							<span class="contact-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-							</span>
-							<a href={contactInfo.github} target="_blank">GitHub Profile</a>
-						</div>
-						<div class="contact-item">
-							<span class="contact-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" /></svg>
-							</span>
-							<a href={contactInfo.linkedIn} target="_blank">LinkedIn</a>
-						</div>
+				<div class="sidebar-section">
+					<h2>Contact</h2>
+					<div class="contact-item">
+						<span class="contact-icon">&#9742;</span>
+						<span>{contactInfo.phone}</span>
 					</div>
+					<div class="contact-item">
+						<span class="contact-icon">&#9993;</span>
+						<a href={`mailto:${contactInfo.email}`}
+							>{contactInfo.email}</a
+						>
+					</div>
+					<div class="contact-item">
+						<span class="contact-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								version="1.1"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								><path
+									fill="#FFFFFF"
+									d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
+								></path></svg
+							>
+						</span>
+						<a href={contactInfo.github} target="_blank"
+							>GitHub Profile</a
+						>
+					</div>
+					<div class="contact-item">
+						<span class="contact-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								version="1.1"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								><path
+									fill="#FFFFFF"
+									d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z"
+								></path></svg
+							>
+						</span>
+						<a href={contactInfo.linkedIn} target="_blank"
+							>LinkedIn</a
+						>
+					</div>
+				</div>
 
-					<div class="sidebar-section">
-						<h2>Education</h2>
-						<ul class="skill-list">
-							{education.map(edu => <li> {edu.degree} - {edu.university} ({edu.year})</li>)}
-						</ul>
-					</div>
+				<div class="sidebar-section">
+					<h2>Education</h2>
+					<ul class="skill-list">
+						{
+							education.map((edu) => (
+								<li>
+									{" "}
+									{edu.degree} - {edu.university} ({edu.year})
+								</li>
+							))
+						}
+					</ul>
+				</div>
 
-					<div class="sidebar-section">
-						<h2>Skills</h2>
-						<ul class="skill-list">
-							{skills.map(skill => <li> {skill}</li>)}
-						</ul>
-					</div>
-					
-					<div class="sidebar-section">
-						<h2>Languages</h2>
-						<ul class="skill-list">
-							<li> Greek (Fluent)</li>
-							<li> English (Fluent)</li>
-						</ul>
-					</div>
-				</aside>
+				<div class="sidebar-section">
+					<h2>Skills</h2>
+					<ul class="skill-list">
+						{technicalSkillsList.map((skill) => <li>{skill}</li>)}
+					</ul>
+				</div>
 
-				<!-- Main Content -->
-				<section class="main-content">
-					<div class="main-header">
-						<h1><span>{name.split(' ')[0]}</span> {name.split(' ')[1]}</h1>
-						<h2>{title}</h2>
-						<hr />
-						<p>
-							Full stack developer with over 20 years of extensive experience in web development and research technologies. 
-							Currently working as a Research Associate at Athena R.C., bringing a wealth of technical expertise 
-							to solve complex computational challenges. Passionate about leveraging cutting-edge technologies 
-							to drive innovative research solutions.
-						</p>
-					</div>
+				<div class="sidebar-section">
+					<h2>Languages</h2>
+					<ul class="skill-list">
+						{languages.map((lang) => (
+							<li>{lang.language} - {lang.level}</li>
+						))}
+					</ul>
+				</div>
+			</aside>
 
-					<div id="work-experience" class="content-section">
-						<h2>Work Experience</h2>
-						{projects.map(project => (
-							<div class="experience-item">
-								<div class="timeline-dot"></div>
-								<div class="experience-content">
-									<div class="experience-header">
-										<div class="experience-title">{project.name}</div>
-										<div class="experience-date">2020 - Present</div>
+			<!-- Main Content -->
+			<section class="main-content">
+				<div class="main-header">
+					<h1>
+						<span>{name.split(" ")[0]}</span>
+						{name.split(" ")[1]}
+					</h1>
+					<h2>{title}</h2>
+					<hr />
+					<p>
+						Full stack developer with over 20 years of extensive
+						experience in web development and research technologies.
+						Currently working as a Research Associate at Athena
+						R.C., bringing a wealth of technical expertise to solve
+						complex computational challenges. Passionate about
+						leveraging cutting-edge technologies to drive innovative
+						research solutions.
+					</p>
+				</div>
+
+					<!-- Navigation Menu -->
+				<nav class="main-nav">
+					<ul>
+						<li><a href="#work-experience">Experience</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#publications">Publications</a></li>
+					</ul>
+				</nav>
+
+				<div id="work-experience" class="content-section">
+					<h2>Work Experience</h2>
+					{
+						experience.map((job) => (
+						  <div class="experience-item">
+							<div class="timeline-dot" />
+							<div class="experience-content">
+							  <div class="experience-header">
+								<div class="experience-title">{job.position}</div>
+								<div class="experience-date">{job.period}</div>
+							  </div>
+							  <div class="experience-subtitle">{job.company}</div>
+							  <ul class="experience-details">
+								{job.responsibilities.map((resp) => (
+								  <li>{resp}</li>
+								))}
+							  </ul>
+							  <div class="experience-tools">
+								<strong>Tools:</strong> {job.tools}
+							  </div>
+							</div>
+						  </div>
+						))
+					}
+				</div>
+
+				<div id="skills" class="content-section">
+					<h2>Skills & Expertise</h2>
+					<div class="skills-container">
+						<div class="skills-category">
+							<h3>Technical Skills</h3>
+							<div class="skills-grid">
+								{skills.technical.map(skill => (
+									<div class="skill-item">
+										<span class="skill-name">{skill.name}</span>
+										<div class="skill-level">
+											<div class="skill-level-bar" style={`width: ${skill.level === 'Expert' ? '90%' : skill.level === 'Advanced' ? '75%' : '60%'};`}></div>
+										</div>
+										<span class="skill-years">{skill.years} years</span>
 									</div>
-									<div class="experience-subtitle">{researchFocus}</div>
-									<p>{project.description}</p>
-									<ul class="experience-details">
-										{project.tech.map(tech => <li>Utilized {tech} for development and implementation</li>)}
-									</ul>
-								</div>
+								))}
 							</div>
-						))}
-					</div>
+						</div>
 
-					<div class="content-section">
-						<h2>Publications</h2>
-						{publications.map(pub => (
-							<div class="publication-item">
-								<div class="publication-title">{pub.title}</div>
-								<div class="publication-details">
-									<strong>{pub.journal}</strong> ({pub.year})<br />
-									Authors: {pub.authors.join(', ')}
-								</div>
+						<div class="skills-category">
+							<h3>Frameworks & Tools</h3>
+							<div class="skills-tags">
+								{skills.frameworks.map(framework => (
+									<span class="skill-tag">{framework}</span>
+								))}
 							</div>
-						))}
+						</div>
+
+						<div class="skills-category">
+							<h3>Methodologies</h3>
+							<div class="skills-tags">
+								{skills.methodologies.map(method => (
+									<span class="skill-tag">{method}</span>
+								))}
+							</div>
+						</div>
+
+						<div class="skills-category">
+							<h3>Soft Skills</h3>
+							<div class="soft-skills">
+								{skills.softSkills.map(skill => (
+									<div class="soft-skill-item">
+										<h4>{skill.title}</h4>
+										<p>{skill.description}</p>
+									</div>
+								))}
+							</div>
+						</div>
 					</div>
-				</section>
-			</main>
+				</div>
+
+				<div id="publications" class="content-section">
+					<h2>Publications</h2>
+					{
+						publications.map((pub) => (
+							<article class="publication-item">
+								<h3 class="publication-title">{pub.title}</h3>
+								<div class="publication-details">
+									<div class="publication-authors">
+										{pub.authors.map((name, index) => (
+											<>
+												{index > 0 && ", "}
+												{name.includes("Doupas") ? <strong>{name}</strong> : <span>{name}</span>}
+											</>
+										))}
+									</div>
+									<div class="publication-journal">
+										<strong>{pub.journal}</strong>
+										{pub.location && `, ${pub.location}`}
+									</div>
+									{pub.pages && (
+										<div class="publication-pages">
+											Pages: {pub.pages}
+										</div>
+									)}
+									{pub.publisher && (
+										<div class="publication-publisher">
+											{pub.publisher}
+										</div>
+									)}
+									{pub.editors && pub.editors.length > 0 && (
+										<div class="publication-editors">
+											In: {pub.editors.join("; ")} (Eds.)
+											{pub.pages ? "," : ""}
+										</div>
+									)}
+									<div class="publication-year">
+										{pub.year}
+									</div>
+								</div>
+							</article>
+						))
+					}
+				</div>
+			</section>
 		</main>
-		<footer>
-			ᕙ(⇀‸↼‶)ᕗ <pre> May the source be with you</pre>
-		</footer>
 	</body>
+	<footer>
+		ᕙ(⇀‸↼‶)ᕗ <pre> May the source be with you</pre>
+	</footer>
 </html>
