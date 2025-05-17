@@ -7,7 +7,6 @@
 
 import { Image } from "astro:assets";
 import profilePic from "../assets/profile.jpg";
-import "./publications-preview.css";
 
 const name = "Sakis Doupas";
 const title = "Research Associate";
@@ -832,6 +831,125 @@ const contactInfo = {
 					height: 45px;
 					right: 1rem;
 					bottom: 1rem;
+				}
+			}
+
+			/* Publications Timeline Styles */
+			#publications.content-section {
+				position: relative;
+			}
+
+			/* Vertical timeline line for publications */
+			#publications.content-section::before {
+				content: "";
+				position: absolute;
+				left: 5px;
+				top: 105px;
+				width: 2px;
+				height: calc(100% - 105px);
+				background-color: #cfd8dc;
+				z-index: 1;
+			}
+
+			/* Publication item container */
+			#publications .publication-item {
+				position: relative;
+				padding-left: 2.5rem;
+				min-height: 2.2rem;
+				background: none;
+				border: none;
+				box-shadow: none;
+			}
+
+			/* Publication timeline dot positioning */
+			.publication-timeline-dot {
+				top: 0.85em;
+			}
+
+			/* Publication title with year */
+			.publication-title {
+				font-size: 1.22rem;
+				font-weight: 600;
+				margin-bottom: 0.15rem;
+				color: #232323;
+				letter-spacing: -0.2px;
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+
+			.publication-year-right {
+				color: #aaa;
+				font-size: 1.1em;
+				font-weight: 400;
+				margin-left: 1em;
+				margin-top: 0.1em;
+			}
+
+			/* Hide old year display */
+			.publication-year {
+				display: none;
+			}
+
+			/* Publication content styling */
+			.publication-authors {
+				font-size: 1.01rem;
+				color: #444;
+				margin-bottom: 0.12rem;
+			}
+
+			.publication-authors strong {
+				color: #c0392b;
+				font-weight: 600;
+			}
+
+			.publication-journal,
+			.publication-pages,
+			.publication-publisher,
+			.publication-editors {
+				font-style: italic;
+				color: #555;
+				font-size: 0.97rem;
+				margin-bottom: 0.04rem;
+			}
+
+			.publication-link a {
+				color: #888;
+				background: none;
+				padding: 0;
+				border: none;
+				font-size: 1rem;
+				font-weight: 400;
+				text-decoration: underline dotted #bbb 1.5px;
+				transition: color 0.15s;
+				margin-left: 0.1em;
+				vertical-align: middle;
+			}
+
+			.publication-link a:hover {
+				color: #232323;
+				text-decoration: underline solid #232323 1.5px;
+			}
+
+			/* Mobile responsiveness for publications */
+			@media (max-width: 600px) {
+				#publications.content-section::before {
+					left: 3px;
+					width: 1.2px;
+				}
+				
+				#publications .publication-item {
+					padding-left: 1.5rem;
+				}
+				
+				.publication-timeline-dot {
+					width: 9px;
+					height: 9px;
+					top: 0.7em;
+				}
+				
+				.publication-title {
+					font-size: 1.03rem;
 				}
 			}
 		</style>
