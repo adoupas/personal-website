@@ -499,27 +499,6 @@ const contactInfo = {
 				width: 100%;
 			}
 
-			@media (max-width: 768px) {
-				.main-nav {
-					padding: 0.6rem 0;
-				}
-
-				.main-nav ul {
-					padding: 0 1rem;
-					overflow-x: auto;
-					white-space: nowrap;
-					display: block;
-				}
-
-				.main-nav li {
-					display: inline-block;
-					margin-right: 1.5rem;
-				}
-
-				.main-nav a {
-					font-size: 0.9rem;
-				}
-			}
 
 			/* Skills Section */
 			.skills-container {
@@ -611,12 +590,6 @@ const contactInfo = {
 				line-height: 1.5;
 			}
 
-			@media (max-width: 768px) {
-				.skills-grid,
-				.soft-skills {
-					grid-template-columns: 1fr;
-				}
-			}
 			.contact-item {
 				display: flex;
 				align-items: center;
@@ -791,15 +764,6 @@ const contactInfo = {
 				margin-top: 2rem;
 			}
 
-			@media (max-width: 768px) {
-				.resume-container {
-					flex-direction: column;
-				}
-				.sidebar,
-				.main-content {
-					width: 100%;
-				}
-			}
 			/* Back to top button */
 			.back-to-top {
 				position: fixed;
@@ -831,14 +795,6 @@ const contactInfo = {
 				transform: translateY(-3px);
 			}
 
-			@media (max-width: 768px) {
-				.back-to-top {
-					width: 45px;
-					height: 45px;
-					right: 1rem;
-					bottom: 1rem;
-				}
-			}
 
 			/* Publications Timeline Styles */
 			#publications.content-section {
@@ -929,23 +885,62 @@ const contactInfo = {
 				text-decoration: underline solid #232323 1.5px;
 			}
 
-			/* Mobile responsiveness for publications */
+			/* Consolidated Media Queries */
 			@media (max-width: 768px) {
+				/* Layout */
+				.resume-container {
+					flex-direction: column;
+				}
+				.sidebar,
+				.main-content {
+					width: 100%;
+				}
+
+				/* Navigation */
+				.main-nav {
+					padding: 0.6rem 0;
+				}
+				.main-nav ul {
+					padding: 0 1rem;
+					overflow-x: auto;
+					white-space: nowrap;
+					display: block;
+				}
+				.main-nav li {
+					display: inline-block;
+					margin-right: 1.5rem;
+				}
+				.main-nav a {
+					font-size: 0.9rem;
+				}
+
+				/* Skills */
+				.skills-grid,
+				.soft-skills {
+					grid-template-columns: 1fr;
+				}
+
+				/* Back to top button */
+				.back-to-top {
+					width: 45px;
+					height: 45px;
+					right: 1rem;
+					bottom: 1rem;
+				}
+
+				/* Publications */
 				#publications.content-section::before {
 					left: 3px;
 					width: 1.2px;
 				}
-				
 				#publications .publication-item {
 					padding-left: 1.5rem;
 				}
-				
 				.publication-item::before {
 					width: 9px;
 					height: 9px;
 					top: 0.7rem;
 				}
-				
 				.publication-title {
 					font-size: 1.03rem;
 				}
