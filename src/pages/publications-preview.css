@@ -1,31 +1,35 @@
-/* Publications Timeline (Work Experience Style, Publications Dot) */
-.publications-timeline {
+/* Publications Timeline (Work Experience Style with Custom Dot) */
+#publications.content-section {
   position: relative;
-  margin-left: 0;
-  padding-left: 0;
 }
-.publications-timeline::before {
+
+/* Vertical timeline line - similar to work experience */
+#publications.content-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 32px;
+  left: 5px;
+  top: 105px;
   width: 2px;
-  height: 100%;
-  background: #cfd8dc;
-  z-index: 0;
+  height: calc(100% - 105px);
+  background-color: #eaeaea;
+  z-index: 1;
 }
-.publication-item {
+
+/* Publication item container */
+#publications .publication-item {
   position: relative;
   margin-bottom: 2.5rem;
+  padding-left: 2.5rem; /* 40px for better spacing */
+  min-height: 2.2rem;
   background: none;
   border: none;
   box-shadow: none;
-  min-height: 2.2rem;
-  padding-left: 4rem!important;
 }
+
+/* Custom dot styling as requested */
 .publication-timeline-dot {
   position: absolute;
-  left: 25px;
+  left: 0;
   top: 0.85em;
   width: 14px;
   height: 14px;
@@ -36,6 +40,7 @@
   z-index: 2;
 }
 
+/* Publication title with year */
 .publication-title {
   font-size: 1.22rem;
   font-weight: 600;
@@ -46,6 +51,7 @@
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .publication-year-right {
   color: #aaa;
   font-size: 1.1em;
@@ -54,63 +60,33 @@
   margin-top: 0.1em;
 }
 
+/* Hide old year display */
 .publication-year {
   display: none;
 }
 
-@media (max-width: 600px) {
-  .publications-timeline::before {
-    left: 16px;
-    width: 1.2px;
-  }
-  .publication-item {
-    padding-left: 36px;
-  }
-  .publication-timeline-dot {
-    left: 9px;
-    width: 9px;
-    height: 9px;
-    top: 0.7em;
-  }
-  .publication-title {
-    font-size: 1.03rem;
-  }
-}
-
-.publication-item {
-  position: relative;
-  margin-bottom: 2.5rem;
-  padding-left: 0.5rem;
-  background: none;
-  border: none;
-  box-shadow: none;
-}
-.publication-year {
-  position: absolute;
-  left: -2.5rem;
-}
-.publication-title {
-  font-size: 1.22rem;
-  font-weight: 600;
-  margin-bottom: 0.15rem;
-  color: #232323;
-  letter-spacing: -0.2px;
-}
+/* Publication content styling */
 .publication-authors {
   font-size: 1.01rem;
   color: #444;
   margin-bottom: 0.12rem;
 }
+
 .publication-authors strong {
   color: #c0392b;
   font-weight: 600;
 }
-.publication-journal, .publication-pages, .publication-publisher, .publication-editors {
+
+.publication-journal, 
+.publication-pages, 
+.publication-publisher, 
+.publication-editors {
   font-style: italic;
   color: #555;
   font-size: 0.97rem;
   margin-bottom: 0.04rem;
 }
+
 .publication-link a {
   color: #888;
   background: none;
@@ -123,22 +99,29 @@
   margin-left: 0.1em;
   vertical-align: middle;
 }
+
 .publication-link a:hover {
   color: #232323;
   text-decoration: underline solid #232323 1.5px;
 }
+
+/* Mobile responsiveness */
 @media (max-width: 600px) {
-  .publications-timeline {
-    margin-left: 1.2rem;
-    padding-left: 0.5rem;
-    border-left-width: 1.2px;
+  #publications.content-section::before {
+    left: 3px;
+    width: 1.2px;
   }
-  .publication-year {
-    left: -1.7rem;
-    width: 1.4rem;
-    height: 1.4rem;
-    font-size: 0.83rem;
+  
+  #publications .publication-item {
+    padding-left: 1.5rem; /* 24px for mobile */
   }
+  
+  .publication-timeline-dot {
+    width: 9px;
+    height: 9px;
+    top: 0.7em;
+  }
+  
   .publication-title {
     font-size: 1.03rem;
   }

@@ -5,9 +5,9 @@
 // Version: 1.0.1
 // see LICENSE for more details
 
-import { Image } from 'astro:assets';
-import profilePic from '../assets/profile.jpg';
-import './publications-preview.css';
+import { Image } from "astro:assets";
+import profilePic from "../assets/profile.jpg";
+import "./publications-preview.css";
 
 const name = "Sakis Doupas";
 const title = "Research Associate";
@@ -24,22 +24,39 @@ const skills = {
 		{ name: "Linux/Windows Administration", level: "Advanced", years: 10 },
 		{ name: "Network Administration", level: "Advanced", years: 8 },
 	],
-	frameworks: ["Symfony", "Laravel", "WordPress", "jQuery", "Qt", ".NET", "TensorFlow", "scikit-learn"],
-	methodologies: ["Agile/Scrum", "Secure Coding Practices", "CI/CD", "Version Control (Git/SVN)"],
+	frameworks: [
+		"Symfony",
+		"Laravel",
+		"WordPress",
+		"jQuery",
+		"Qt",
+		".NET",
+		"TensorFlow",
+		"scikit-learn",
+	],
+	methodologies: [
+		"Agile/Scrum",
+		"Secure Coding Practices",
+		"CI/CD",
+		"Version Control (Git/SVN)",
+	],
 	softSkills: [
 		{
 			title: "Communication",
-			description: "Proven ability to collaborate effectively with remote teams and clients through various communication channels including phone, email, and video conferencing. Experienced in leading small development teams and delivering presentations to diverse audiences."
+			description:
+				"Proven ability to collaborate effectively with remote teams and clients through various communication channels including phone, email, and video conferencing. Experienced in leading small development teams and delivering presentations to diverse audiences.",
 		},
 		{
 			title: "Project Management",
-			description: "Extensive experience in planning, implementing, and managing software projects. Skilled in coordinating team efforts, meeting tight deadlines, and making critical project decisions. Experienced in EU-funded projects with strict timelines and deliverables."
+			description:
+				"Extensive experience in planning, implementing, and managing software projects. Skilled in coordinating team efforts, meeting tight deadlines, and making critical project decisions. Experienced in EU-funded projects with strict timelines and deliverables.",
 		},
 		{
 			title: "Technical Leadership",
-			description: "Two decades of experience in software development across various domains. Proficient in technical documentation, proposal writing, and guiding project direction. Trusted with strategic decision-making for project roadmaps and technical implementations."
-		}
-	]
+			description:
+				"Two decades of experience in software development across various domains. Proficient in technical documentation, proposal writing, and guiding project direction. Trusted with strategic decision-making for project roadmaps and technical implementations.",
+		},
+	],
 };
 
 // Simple array of technical skills for the skills list
@@ -51,18 +68,18 @@ const technicalSkillsList = [
 	"C++ (Qt, Boost)",
 	".NET",
 	"Perl",
-	"Linux/Windows System Administration"
+	"Linux/Windows System Administration",
 ];
 
 const languages = [
 	{
 		language: "Greek",
-		level: "Native"
+		level: "Native",
 	},
 	{
 		language: "English",
-		level: "Proficiency (Certificate of Proficiency in English, University of Michigan)"
-	}
+		level: "Proficiency (Certificate of Proficiency in English, University of Michigan)",
+	},
 ];
 
 const education = [
@@ -99,7 +116,7 @@ const publications = [
 			"Stainhaouer, Gregory",
 		],
 		editors: ["Fletcher, George", "Kantere, Verena"],
-		link: "https://www.researchgate.net/publication/369692590_Exposing_Geospatial_Cultural_Heritage_Content_in_Map-based_Applications"
+		link: "https://www.researchgate.net/publication/369692590_Exposing_Geospatial_Cultural_Heritage_Content_in_Map-based_Applications",
 	},
 	{
 		title: "From mythos to logos: A bilingual thesaurus tailored to meet users' needs within the ecosystem of cultural tourism",
@@ -122,7 +139,7 @@ const publications = [
 			"Möhrs, Christine",
 			"Storjohann, Petra",
 		],
-		link: "https://www.researchgate.net/publication/362058488_From_mythos_to_logos_A_bilingual_thesaurus_tailored_to_meet_users'_needs_within_the_ecosystem_of_cultural_tourism"
+		link: "https://www.researchgate.net/publication/362058488_From_mythos_to_logos_A_bilingual_thesaurus_tailored_to_meet_users'_needs_within_the_ecosystem_of_cultural_tourism",
 	},
 	{
 		title: "Language Resources for human-centric NLP: the MYTHOTOPIA geo-tagged dataset",
@@ -146,7 +163,7 @@ const publications = [
 			"Tsiafaki, Despoina",
 			"Flouda, Christina",
 		],
-		link: "https://www.researchgate.net/publication/374337860_Language_Resources_for_human-centric_NLP_the_MYTHOTOPIA_geo-tagged_dataset"
+		link: "https://www.researchgate.net/publication/374337860_Language_Resources_for_human-centric_NLP_the_MYTHOTOPIA_geo-tagged_dataset",
 	},
 	{
 		title: "Mythotopia, Magical today, alive yesterday: Journeys in Eastern Macedonia & Thrace",
@@ -170,7 +187,7 @@ const publications = [
 			"Tsiafaki, Despoina",
 			"Flouda, Christina",
 		],
-		link: "https://www.researchgate.net/publication/374337694_Mythotopia_Magical_today_alive_yesterday_Journeys_in_Eastern_Macedonia_Thrace"
+		link: "https://www.researchgate.net/publication/374337694_Mythotopia_Magical_today_alive_yesterday_Journeys_in_Eastern_Macedonia_Thrace",
 	},
 	{
 		title: "Mythotopia: The educational application",
@@ -194,7 +211,7 @@ const publications = [
 			"Tsiafaki, Despoina",
 			"Flouda, Christina",
 		],
-		link: "https://www.researchgate.net/publication/374337857_Mythotopia_The_educational_application"
+		link: "https://www.researchgate.net/publication/374337857_Mythotopia_The_educational_application",
 	},
 	{
 		title: "Placing multi-modal, and multi-lingual data in the humanities domain on the map: The Mythotopia geotagged corpus",
@@ -214,8 +231,8 @@ const publications = [
 			"Bikakis, Nikos",
 			"Kaffes, Vassilis",
 			"Stainhaouer, Gregory",
-		],	
-		link: "https://www.researchgate.net/publication/361608576_Placing_multi-modal_and_multi-lingual_data_in_the_humanities_domain_on_the_map_The_Mythotopia_geotagged_corpus"
+		],
+		link: "https://www.researchgate.net/publication/361608576_Placing_multi-modal_and_multi-lingual_data_in_the_humanities_domain_on_the_map_The_Mythotopia_geotagged_corpus",
 	},
 ];
 
@@ -284,10 +301,10 @@ const experience = [
 			"Development of tools for enriching the National Treasury of the Greek Language (Programming languages: Perl, VB.NET, SQL)",
 			"Development of the Educational Treasury of Greek Texts, participation in writing deliverables and project presentation (Programming languages: VB.NET, Javascript, SQL)",
 			"Website development for the National Theatre archive (Programming languages: VB.NET, javascript/jQuery, SQL)",
-			"Systems management: Windows/Linux servers, DNS, email, SQL, firewall and network: Cisco routers, OSPF and BGP routing protocols, access control lists implementation"
+			"Systems management: Windows/Linux servers, DNS, email, SQL, firewall and network: Cisco routers, OSPF and BGP routing protocols, access control lists implementation",
 		],
-		tools: "Perl, VB.NET, JavaScript, jQuery, SQL, Windows/Linux Server, Cisco Networking, OSPF, BGP"
-	}
+		tools: "Perl, VB.NET, JavaScript, jQuery, SQL, Windows/Linux Server, Cisco Networking, OSPF, BGP",
+	},
 ];
 
 const contactInfo = {
@@ -460,7 +477,7 @@ const contactInfo = {
 			}
 
 			.main-nav a::after {
-				content: '';
+				content: "";
 				position: absolute;
 				width: 0;
 				height: 2px;
@@ -914,9 +931,13 @@ const contactInfo = {
 				<div class="sidebar-section">
 					<h2>Languages</h2>
 					<ul class="skill-list">
-						{languages.map((lang) => (
-							<li>{lang.language} - {lang.level}</li>
-						))}
+						{
+							languages.map((lang) => (
+								<li>
+									{lang.language} - {lang.level}
+								</li>
+							))
+						}
 					</ul>
 				</div>
 			</aside>
@@ -941,7 +962,7 @@ const contactInfo = {
 					</p>
 				</div>
 
-					<!-- Navigation Menu -->
+				<!-- Navigation Menu -->
 				<nav class="main-nav">
 					<ul>
 						<li><a href="#work-experience">Experience</a></li>
@@ -954,24 +975,30 @@ const contactInfo = {
 					<h2>Work Experience</h2>
 					{
 						experience.map((job) => (
-						  <div class="experience-item">
-							<div class="timeline-dot" />
-							<div class="experience-content">
-							  <div class="experience-header">
-								<div class="experience-title">{job.position}</div>
-								<div class="experience-date">{job.period}</div>
-							  </div>
-							  <div class="experience-subtitle">{job.company}</div>
-							  <ul class="experience-details">
-								{job.responsibilities.map((resp) => (
-								  <li>{resp}</li>
-								))}
-							  </ul>
-							  <div class="experience-tools">
-								<strong>Tools:</strong> {job.tools}
-							  </div>
+							<div class="experience-item">
+								<div class="timeline-dot" />
+								<div class="experience-content">
+									<div class="experience-header">
+										<div class="experience-title">
+											{job.position}
+										</div>
+										<div class="experience-date">
+											{job.period}
+										</div>
+									</div>
+									<div class="experience-subtitle">
+										{job.company}
+									</div>
+									<ul class="experience-details">
+										{job.responsibilities.map((resp) => (
+											<li>{resp}</li>
+										))}
+									</ul>
+									<div class="experience-tools">
+										<strong>Tools:</strong> {job.tools}
+									</div>
+								</div>
 							</div>
-						  </div>
 						))
 					}
 				</div>
@@ -982,148 +1009,194 @@ const contactInfo = {
 						<div class="skills-category">
 							<h3>Technical Skills</h3>
 							<div class="skills-grid">
-								{skills.technical.map(skill => (
-									<div class="skill-item">
-										<span class="skill-name">{skill.name}</span>
-										<div class="skill-level">
-											<div class="skill-level-bar" style={`width: ${skill.level === 'Expert' ? '90%' : skill.level === 'Advanced' ? '75%' : '60%'};`}></div>
+								{
+									skills.technical.map((skill) => (
+										<div class="skill-item">
+											<span class="skill-name">
+												{skill.name}
+											</span>
+											<div class="skill-level">
+												<div
+													class="skill-level-bar"
+													style={`width: ${skill.level === "Expert" ? "90%" : skill.level === "Advanced" ? "75%" : "60%"};`}
+												/>
+											</div>
+											<span class="skill-years">
+												{skill.years} years
+											</span>
 										</div>
-										<span class="skill-years">{skill.years} years</span>
-									</div>
-								))}
+									))
+								}
 							</div>
 						</div>
 
 						<div class="skills-category">
 							<h3>Frameworks & Tools</h3>
 							<div class="skills-tags">
-								{skills.frameworks.map(framework => (
-									<span class="skill-tag">{framework}</span>
-								))}
+								{
+									skills.frameworks.map((framework) => (
+										<span class="skill-tag">
+											{framework}
+										</span>
+									))
+								}
 							</div>
 						</div>
 
 						<div class="skills-category">
 							<h3>Methodologies</h3>
 							<div class="skills-tags">
-								{skills.methodologies.map(method => (
-									<span class="skill-tag">{method}</span>
-								))}
+								{
+									skills.methodologies.map((method) => (
+										<span class="skill-tag">{method}</span>
+									))
+								}
 							</div>
 						</div>
 
 						<div class="skills-category">
 							<h3>Soft Skills</h3>
 							<div class="soft-skills">
-								{skills.softSkills.map(skill => (
-									<div class="soft-skill-item">
-										<h4>{skill.title}</h4>
-										<p>{skill.description}</p>
-									</div>
-								))}
+								{
+									skills.softSkills.map((skill) => (
+										<div class="soft-skill-item">
+											<h4>{skill.title}</h4>
+											<p>{skill.description}</p>
+										</div>
+									))
+								}
 							</div>
 						</div>
 					</div>
-				</div>
 				</div>
 
 				<!-- Publications Timeline Section -->
 				<div id="publications" class="content-section">
 					<h2>Publications</h2>
-					<div class="publications-timeline">
-						{publications.map((pub) => (
-							<article class="publication-item">
-							<span class="publication-timeline-dot"></span>
-							<h3 class="publication-title">{pub.title}
-								<span class="publication-year-right">{pub.year}</span>
+					{
+					publications.map((pub) => (
+						<article class="publication-item">
+							<span class="publication-timeline-dot" />
+							<h3 class="publication-title">
+								{pub.title}
+								<span class="publication-year-right">
+									{pub.year}
+								</span>
 							</h3>
-								<div class="publication-details">
-									<div class="publication-authors">
-										{pub.authors.map((name, index) => (
-											<>
-												{index > 0 && ", "}
-												{name.includes("Doupas") ? <strong>{name}</strong> : <span>{name}</span>}
-											</>
-										))}
+							<div class="publication-details">
+								<div class="publication-authors">
+									{pub.authors.map((name, index) => (
+										<>
+											{index > 0 && ", "}
+											{name.includes("Doupas") ? (
+												<strong>{name}</strong>
+											) : (
+												<span>{name}</span>
+											)}
+										</>
+									))}
+								</div>
+								<div class="publication-journal">
+									<strong>{pub.journal}</strong>
+									{pub.location && `, ${pub.location}`}
+								</div>
+								{pub.pages && (
+									<div class="publication-pages">
+										Pages: {pub.pages}
 									</div>
-									<div class="publication-journal">
-										<strong>{pub.journal}</strong>
-										{pub.location && `, ${pub.location}`}
+								)}
+								{pub.publisher && (
+									<div class="publication-publisher">
+										{pub.publisher}
 									</div>
-									{pub.pages && (
-										<div class="publication-pages">
-											Pages: {pub.pages}
-										</div>
-									)}
-									{pub.publisher && (
-										<div class="publication-publisher">
-											{pub.publisher}
-										</div>
-									)}
-									{pub.editors && pub.editors.length > 0 && (
-										<div class="publication-editors">
-											In: {pub.editors.join("; ")} (Eds.)
-											{pub.pages ? "," : ""}
-										</div>
-									)}
-									{pub.link && (
+								)}
+								{pub.editors && pub.editors.length > 0 && (
+									<div class="publication-editors">
+										In: {pub.editors.join("; ")} (Eds.)
+										{pub.pages ? "," : ""}
+									</div>
+								)}
+								{pub.link && (
 									<div class="publication-link">
-										<a href={pub.link} target="_blank" rel="noopener noreferrer">
-											View on {(() => { try { return new URL(pub.link).hostname.replace(/^www\./, ''); } catch { return 'source'; } })()}
-											<svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-												<path d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16z"/>
-												<path d="M488 0H360c-21.4 0-32 25.9-17 41l35.7 35.7L135 320.4a24 24 0 0 0 0 34l28.3 28.3a24 24 0 0 0 34 0l243.9-243.7L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"/>
+										<a
+											href={pub.link}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											View on{" "}
+											{(() => {
+												try {
+													return new URL(
+														pub.link,
+													).hostname.replace(
+														/^www\./,
+														"",
+													);
+												} catch {
+													return "source";
+												}
+											})()}
+											<svg
+												class="external-link-icon"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 512 512"
+												fill="currentColor"
+											>
+												<path d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16z" />
+												<path d="M488 0H360c-21.4 0-32 25.9-17 41l35.7 35.7L135 320.4a24 24 0 0 0 0 34l28.3 28.3a24 24 0 0 0 34 0l243.9-243.7L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z" />
 											</svg>
 										</a>
 									</div>
 								)}
-								</div>
-							</article>
-						))}
-					</div>
+							</div>
+						</article>
+					))
+				}
 				</div>
-
-			</section>
+			</main>
 			<!-- Back to Top Button -->
 			<a href="#" class="back-to-top" id="backToTop" title="Back to top">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M18 15l-6-6-6 6"/>
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M18 15l-6-6-6 6"></path>
 				</svg>
 			</a>
-		<!-- Back to Top Button -->
-		<a href="#" class="back-to-top" id="backToTop" title="Back to top">
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				<path d="M18 15l-6-6-6 6"/>
-			</svg>
-		</a>
-	</body>
-	<footer>
-		ᕙ(⇀‸↼‶)ᕗ <pre> May the source be with you</pre>
-	</footer>
-	
-	<script>
-		// Back to top button
-		document.addEventListener('DOMContentLoaded', () => {
-			const backToTopButton = document.getElementById('backToTop');
-			if (backToTopButton) {
-				// Show/hide button on scroll
-				window.addEventListener('scroll', () => {
-					if (window.pageYOffset > 300) {
-						backToTopButton.classList.add('visible');
-					} else {
-						backToTopButton.classList.remove('visible');
-					}
-				});
-				
-				// Smooth scroll to top
-				backToTopButton.addEventListener('click', (e) => {
-					e.preventDefault();
-					window.scrollTo({
-						top: 0,
-						behavior: 'smooth'
+			<footer>
+				ᕙ(⇀‸↼‶)ᕗ <pre> May the source be with you</pre>
+			</footer>
+
+		<script>
+			// Back to top button
+			document.addEventListener("DOMContentLoaded", () => {
+				const backToTopButton = document.getElementById("backToTop");
+				if (backToTopButton) {
+					// Show/hide button on scroll
+					window.addEventListener("scroll", () => {
+						if (window.pageYOffset > 300) {
+							backToTopButton.classList.add("visible");
+						} else {
+							backToTopButton.classList.remove("visible");
+						}
 					});
-				});
-			}
-		});
-	</script>
+
+					// Smooth scroll to top
+					backToTopButton.addEventListener("click", (e) => {
+						e.preventDefault();
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth",
+						});
+					});
+				}
+			});
+		</script>
+	</body>
 </html>
