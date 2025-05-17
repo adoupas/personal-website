@@ -683,10 +683,17 @@ const contactInfo = {
 				position: relative;
 				padding-left: 2.5rem;
 			}
-			.timeline-dot {
+			.experience-item,
+			.publication-item {
+				position: relative;
+			}
+			
+			.experience-item::before,
+			.publication-item::before {
+				content: '';
 				position: absolute;
-				left: 0;
-				top: 8px;
+				left: -3px;
+				top: 0.8rem;
 				width: 14px;
 				height: 14px;
 				border-radius: 50%;
@@ -735,7 +742,6 @@ const contactInfo = {
 			.publication-item {
 				margin-bottom: 1.5rem;
 				padding-bottom: 1.5rem;
-				/* border-bottom: 1px solid #eee; */
 			}
 			.publication-item:last-child {
 				border-bottom: none;
@@ -861,10 +867,7 @@ const contactInfo = {
 				box-shadow: none;
 			}
 
-			/* Publication timeline dot positioning */
-			.publication-timeline-dot {
-				top: 0.85em;
-			}
+			/* Timeline styling is now handled by ::before pseudo-elements */
 
 			/* Publication title with year */
 			.publication-title {
@@ -884,11 +887,6 @@ const contactInfo = {
 				font-weight: 400;
 				margin-left: 1em;
 				margin-top: 0.1em;
-			}
-
-			/* Hide old year display */
-			.publication-year {
-				display: none;
 			}
 
 			/* Publication content styling */
@@ -1096,7 +1094,6 @@ const contactInfo = {
 					{
 						experience.map((job) => (
 							<div class="experience-item">
-								<div class="timeline-dot" />
 								<div class="experience-content">
 									<div class="experience-header">
 										<div class="experience-title">
@@ -1196,7 +1193,6 @@ const contactInfo = {
 					{
 					publications.map((pub) => (
 						<article class="publication-item">
-							<span class="timeline-dot publication-timeline-dot" />
 							<h3 class="publication-title">
 								{pub.title}
 								<span class="publication-year-right">
