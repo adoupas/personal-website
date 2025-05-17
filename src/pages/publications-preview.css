@@ -26,18 +26,9 @@
   box-shadow: none;
 }
 
-/* Custom dot styling as requested */
+/* Use the common timeline-dot class from the main stylesheet */
 .publication-timeline-dot {
-  position: absolute;
-  left: 0;
-  top: 0.85em;
-  width: 14px;
-  height: 14px;
-  background: #3e5c76;
-  border-radius: 50%;
-  border: 2.5px solid #fff;
-  box-shadow: 0 0 0 2px #cfd8dc;
-  z-index: 2;
+  top: 0.85em; /* Only override the top position for publications */
 }
 
 /* Publication title with year */
