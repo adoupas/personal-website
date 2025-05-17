@@ -7,6 +7,7 @@
 
 import { Image } from 'astro:assets';
 import profilePic from '../assets/profile.jpg';
+import './publications-preview.css';
 
 const name = "Sakis Doupas";
 const title = "Research Associate";
@@ -716,7 +717,7 @@ const contactInfo = {
 			.publication-item {
 				margin-bottom: 1.5rem;
 				padding-bottom: 1.5rem;
-				border-bottom: 1px solid #eee;
+				/* border-bottom: 1px solid #eee; */
 			}
 			.publication-item:last-child {
 				border-bottom: none;
@@ -1024,13 +1025,18 @@ const contactInfo = {
 						</div>
 					</div>
 				</div>
+				</div>
 
+				<!-- Publications Timeline Section -->
 				<div id="publications" class="content-section">
 					<h2>Publications</h2>
-					{
-						publications.map((pub) => (
+					<div class="publications-timeline">
+						{publications.map((pub) => (
 							<article class="publication-item">
-								<h3 class="publication-title">{pub.title}</h3>
+							<span class="publication-timeline-dot"></span>
+							<h3 class="publication-title">{pub.title}
+								<span class="publication-year-right">{pub.year}</span>
+							</h3>
 								<div class="publication-details">
 									<div class="publication-authors">
 										{pub.authors.map((name, index) => (
@@ -1060,27 +1066,30 @@ const contactInfo = {
 											{pub.pages ? "," : ""}
 										</div>
 									)}
-									<div class="publication-year">
-										{pub.year}
-									</div>
 									{pub.link && (
-										<div class="publication-link">
-											<a href={pub.link} target="_blank" rel="noopener noreferrer">
-												View on ResearchGate
-												<svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-													<path d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16z"/>
-													<path d="M488 0H360c-21.4 0-32 25.9-17 41l35.7 35.7L135 320.4a24 24 0 0 0 0 34l28.3 28.3a24 24 0 0 0 34 0l243.9-243.7L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"/>
-												</svg>
-											</a>
-										</div>
-									)}
+									<div class="publication-link">
+										<a href={pub.link} target="_blank" rel="noopener noreferrer">
+											View on {(() => { try { return new URL(pub.link).hostname.replace(/^www\./, ''); } catch { return 'source'; } })()}
+											<svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+												<path d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16z"/>
+												<path d="M488 0H360c-21.4 0-32 25.9-17 41l35.7 35.7L135 320.4a24 24 0 0 0 0 34l28.3 28.3a24 24 0 0 0 34 0l243.9-243.7L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"/>
+											</svg>
+										</a>
+									</div>
+								)}
 								</div>
 							</article>
-						))
-					}
+						))}
+					</div>
 				</div>
+
 			</section>
-		</main>
+			<!-- Back to Top Button -->
+			<a href="#" class="back-to-top" id="backToTop" title="Back to top">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M18 15l-6-6-6 6"/>
+				</svg>
+			</a>
 		<!-- Back to Top Button -->
 		<a href="#" class="back-to-top" id="backToTop" title="Back to top">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

@@ -1,0 +1,146 @@
+/* Publications Timeline (Work Experience Style, Publications Dot) */
+.publications-timeline {
+  position: relative;
+  margin-left: 0;
+  padding-left: 0;
+}
+.publications-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 2px;
+  height: 100%;
+  background: #cfd8dc;
+  z-index: 0;
+}
+.publication-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  min-height: 2.2rem;
+  padding-left: 4rem!important;
+}
+.publication-timeline-dot {
+  position: absolute;
+  left: 25px;
+  top: 0.85em;
+  width: 14px;
+  height: 14px;
+  background: #3e5c76;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  box-shadow: 0 0 0 2px #cfd8dc;
+  z-index: 2;
+}
+
+.publication-title {
+  font-size: 1.22rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  color: #232323;
+  letter-spacing: -0.2px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.publication-year-right {
+  color: #aaa;
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-left: 1em;
+  margin-top: 0.1em;
+}
+
+.publication-year {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .publications-timeline::before {
+    left: 16px;
+    width: 1.2px;
+  }
+  .publication-item {
+    padding-left: 36px;
+  }
+  .publication-timeline-dot {
+    left: 9px;
+    width: 9px;
+    height: 9px;
+    top: 0.7em;
+  }
+  .publication-title {
+    font-size: 1.03rem;
+  }
+}
+
+.publication-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 0.5rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.publication-year {
+  position: absolute;
+  left: -2.5rem;
+}
+.publication-title {
+  font-size: 1.22rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  color: #232323;
+  letter-spacing: -0.2px;
+}
+.publication-authors {
+  font-size: 1.01rem;
+  color: #444;
+  margin-bottom: 0.12rem;
+}
+.publication-authors strong {
+  color: #c0392b;
+  font-weight: 600;
+}
+.publication-journal, .publication-pages, .publication-publisher, .publication-editors {
+  font-style: italic;
+  color: #555;
+  font-size: 0.97rem;
+  margin-bottom: 0.04rem;
+}
+.publication-link a {
+  color: #888;
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: underline dotted #bbb 1.5px;
+  transition: color 0.15s;
+  margin-left: 0.1em;
+  vertical-align: middle;
+}
+.publication-link a:hover {
+  color: #232323;
+  text-decoration: underline solid #232323 1.5px;
+}
+@media (max-width: 600px) {
+  .publications-timeline {
+    margin-left: 1.2rem;
+    padding-left: 0.5rem;
+    border-left-width: 1.2px;
+  }
+  .publication-year {
+    left: -1.7rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 0.83rem;
+  }
+  .publication-title {
+    font-size: 1.03rem;
+  }
+}
+
